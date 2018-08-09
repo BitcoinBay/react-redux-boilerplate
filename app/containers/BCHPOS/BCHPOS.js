@@ -1,37 +1,23 @@
-/*
- * BCHPOS
- *
- * This is the page for the POS
- */
-
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import NumPad from 'react-numpad';
-
 import './style.scss';
 
-export default class BCHPOS extends React.PureComponent {
+export default class BCHPOS extends React.Component {
+  // eslint-disable-line react/prefer-stateless-function
+
   render() {
     return (
-      <div className="cashier-page">
+      <div className="feature-page">
         <Helmet>
-          <title>Cashier Page</title>
+          <title>Feature Page</title>
           <meta
             name="description"
-            content="Cashier page of React.js BCHPOS application"
+            content="Feature page of React.js Boilerplate application"
           />
         </Helmet>
-        <h1>Cashier Page</h1>
-        <NumPad.Number
-          onChange={(value) => { console.log('value', value)}}
-          label={'Total'}
-          placeholder={'my placeholder'}
-          value={100}
-        />
+        <h1>BCHPOS</h1>
       </div>
+
     );
   }
 }
-
-// BCHPOS.propTypes = {};
