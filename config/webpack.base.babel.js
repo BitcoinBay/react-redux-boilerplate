@@ -71,8 +71,13 @@ module.exports = (options) => ({
         use: 'html-loader'
       },
       {
+	type: 'javascript/auto',
         test: /\.json$/,
-        use: 'json-loader'
+	exclude: /(node_modules|bower_components)/,
+        use: [{
+      	  loader: 'file-loader',
+          options: { name: '[name].[ext]' },
+        }],
       },
       {
         test: /\.(mp4|webm)$/,
